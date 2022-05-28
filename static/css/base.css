@@ -24,3 +24,11 @@ nav {
     font-size: 2rem;
     font-family: 'Raleway', sans-serif;
 }
+
+#burger {
+    margin: 1rem 2rem;
+}
+
+#burger a {
+    color: black;
+}
