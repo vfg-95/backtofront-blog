@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'embed_video',
     'fontawesomefree',
     'blog',
+    'member',
 ]
 
 MIDDLEWARE = [
