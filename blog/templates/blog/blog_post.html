@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block content %}
+<section id="post-section">
+
+    <div class="post-title">
+        <h1>{{ post.title }}</h1>
+    </div>
+
+    <div class="img_contain">
+        <img class="post-img" src="{{ post.image.url }}" alt="">
+    </div>
+
+    <div class="post-info">
+        <h4>Words by {{ post.author }}</h4>
+        <p>{{ post.posted_on }}</p>
+    </div>
+
+    <div class="post-content">
+        {{ post.content | safe }}
+    </div>
+
+</section>
+{% endblock %}
