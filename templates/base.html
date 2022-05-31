@@ -7,6 +7,7 @@
     <title>Back To Front</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     {% block extra_css %}
@@ -35,7 +36,7 @@
                 <li><a href="{% url 'userlogout' %}"><p>Log Out</p></a></li>
                 {% else %}
                 <li><a href="{% url 'userlogin' %}"><p>Log In</p></a></li>
-                <li><a href="#"><p>Log Out</p></a></li>
+                <li><a href="#"><p>Sign Up</p></a></li>
                 {% endif %}
             </ul>
         </div>
