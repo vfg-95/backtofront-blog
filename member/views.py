@@ -11,12 +11,16 @@ def UserLogin(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("templates/index.html")
         else:
             messages.success(request, ("Login unsuccessful - Please try again"))
             return render(request, 'userlogin')
     else:
         return render(request, 'member/login.html', {})
+
+
+def UserLogOut(request):
+    logout(request)
+    return redirect('home')
 
 
 # class MemberSignUp(generic.CreateView):
