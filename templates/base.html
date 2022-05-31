@@ -24,29 +24,21 @@
                 <h2>BACK TO FRONT</h2>
             </a>
         </div>
-        <div id="burger">
+        <!-- <div id="burger">
             <a href="#">
                 <i class="fa-solid fa-bars fa-2xl"></i>
             </a>
+        </div> -->
+        <div class="navbar-links">
+            <ul>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'userlogout' %}"><p>Log Out</p></a></li>
+                {% else %}
+                <li><a href="{% url 'userlogin' %}"><p>Log In</p></a></li>
+                <li><a href="#"><p>Log Out</p></a></li>
+                {% endif %}
+            </ul>
         </div>
-        <div>
-            <a href="#">
-                <h3>Sign Up</h3>
-            </a>
-        </div>
-        {% if user.is_authenticated %}
-        <div>
-            <a href="{% url 'userlogout' %}">
-                <h3>Log Out</h3>
-            </a>
-        </div>
-        {% else %}
-        <div>
-            <a href="{% url 'userlogin' %}">
-                <h3>Log In</h3>
-            </a>
-        </div>
-        {% endif %}
     </nav>
 
     <main>
