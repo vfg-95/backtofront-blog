@@ -30,10 +30,23 @@
             </a>
         </div>
         <div>
-            <a href="{% url 'signup' %}">
+            <a href="#">
                 <h3>Sign Up</h3>
             </a>
         </div>
+        {% if user.is_authenticated %}
+        <div>
+            <a href="{% url 'userlogout' %}">
+                <h3>Log Out</h3>
+            </a>
+        </div>
+        {% else %}
+        <div>
+            <a href="{% url 'userlogin' %}">
+                <h3>Log In</h3>
+            </a>
+        </div>
+        {% endif %}
     </nav>
 
     <main>
