@@ -34,10 +34,10 @@
         <div class="navbar-links">
             <ul>
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'userlogout' %}"><p>Log Out</p></a></li>
+                <li><a href="{% url 'account_logout' %}"><p>Log Out</p></a></li>
                 {% else %}
-                <li><a href="{% url 'userlogin' %}"><p>Log In</p></a></li>
-                <li><a href="#"><p>Sign Up</p></a></li>
+                <li><a href="{% url 'account_login' %}"><p>Log In</p></a></li>
+                <li><a href="{% url 'account_signup' %}"><p>Sign Up</p></a></li>
                 {% endif %}
             </ul>
         </div>
