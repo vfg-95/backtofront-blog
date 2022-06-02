@@ -4,17 +4,20 @@
 <html>
 
 <head>
-    <title>Back To Front</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     {% block extra_css %}
     {% endblock %}
 
-    
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+
+    <title>Back To Front {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -53,7 +56,10 @@
     <footer>
 
     </footer>
+    
     <script src="{% static 'js/base.js' %}"></script>
+    {% block extra_js %}
+    {% endblock %}
 </body>
 
 </html>
